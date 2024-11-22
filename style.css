@@ -1,0 +1,2351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+    word-spacing: 2px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #353b31;
+    color: #faf9d9;
+    line-height: 1.6;
+}
+
+.intro-text{
+    font-size: 20px;
+}
+
+#header {
+    width: 100%;
+    height: 120vh;
+    background-image: url(images/home_background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header:hover::before {
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;       
+    top: 0;                 
+    left: 0;                
+    width: 100%;           
+    background-color: #524e4a; 
+    padding: 10px 30px;      
+    box-sizing: border-box; 
+    z-index: 10;   
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #faf9d9;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8c7e67;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.6s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 25%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.header-text h1 span{
+    color: #8c7e67;
+}
+
+/* ------------------------------------- about ---------------------------------------------- */
+
+#about{
+    margin-top: -100px;
+    padding: 40px 0;
+    color: #faf9d9;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.about-col-1 img:hover {
+    transform: scale(1.05); 
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #8c7e67;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 0;
+}
+
+.tab-links{
+    margin: 30px 60px 30px 0;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8c7e67;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    margin: 10px 0 10px 10px;
+}
+
+.tab-contents ul li span{
+    color: #b13a1c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.language-group{
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    transition: box-shadow 0.3s ease; 
+}
+
+.language-group:hover {
+    box-shadow: 0 2px 15px rgb(255, 244, 200);
+}
+
+.language-group > li b {
+    font-size: 18px;
+    color: #b13a1c;
+    margin-bottom: 10px;
+}
+
+.language-group > li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.skill-group{
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    transition: box-shadow 0.3s ease; 
+}
+
+.skill-group:hover {
+    box-shadow: 0 2px 15px rgb(255, 244, 200);
+}
+
+.skill-group > li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.education-group, .experience-group {
+    background-color: #f9f9f9; 
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;              
+    list-style: none;  
+    transition: box-shadow 0.3s ease; 
+}
+
+.education-group:hover, .experience-group:hover {
+    box-shadow: 0 2px 15px rgb(255, 244, 200);
+}
+
+.education-group > li, .experience-group > li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.education-group li span, .experience-group li span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #444;
+}
+
+.education-group li ul, .experience-group li ul {
+    list-style: disc;            
+    padding-left: 20px;        
+    margin-top: 5px;
+}
+
+.education-group li ul li, .experience-group li ul li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ------------------------------------- portfolio ---------------------------------------------- */
+
+#portfolio{
+    padding: 100px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+
+.work{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.work:hover{
+    box-shadow: 0 2px 15px rgb(255, 244, 200);
+}
+
+.work img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #343434);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer a{
+    margin-top: 10px;
+    color: #faf9d9;
+    font-size: 18px;
+    line-height: 60px;
+    background: #b13a1c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.layer a:hover{
+    color: #b13a1c;
+    background: #faf9d9;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%; 
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 2px solid #b13a1c;
+    padding: 14px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #faf9d9;
+    transition: background 0.5s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn:hover{
+    background: #b13a1c;
+    box-shadow: 0 2px 15px rgb(0, 0, 0);
+}
+
+/* ------------------------------------- contact ---------------------------------------------- */
+
+.contact{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.contact-left{
+    flex-basis: 40%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #faf9d9;
+}
+
+.contact-left p i{
+    color: #faf9d9;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #ffffff00;
+}
+
+.btn.btn2:hover{
+    background-color: #b13a1c;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    background: #ffffffd8;
+    padding: 15px;
+    margin: 15px 0;
+    color: #b13a1c;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* ------------------------------------- footer ---------------------------------------------- */
+
+footer {
+    margin-top: 100px;
+    background-color: #524e4a;
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+/* ------------------------------------- work.html ---------------------------------------------- */
+
+.back-icon {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
+}
+
+.back-icon a {
+    color: #faf9d9;      
+    font-size: 24px;     
+    text-decoration: none;
+    background-color: #b13a1c;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.back-icon a:hover {
+    color: #b13a1c; 
+    background-color: #faf9d9;
+}
+
+/* ------------------------------------- colorpy.html ---------------------------------------------- */
+
+.link-icon {
+    color: #faf9d9;        
+    font-size: 18px;           
+    text-decoration: none;   
+}
+
+.link-icon:hover {
+    color: #b13a1c;   
+}
+
+.link-icon i {
+    margin-right: 8px;  
+}
+
+#website .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+}
+
+#portfolio .container p{
+    color: #faf9d9;        
+    font-size: 20px; 
+    margin-top: 10px;
+}
+
+.website img{
+    width: 100%; 
+    border-radius: 15px;
+    display: block;
+}
+
+.image-number {
+    font-size: 18px;
+    color: #ffffff;          
+    background-color: #b13a1c; 
+    width: 35px;             
+    height: 35px;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;        
+    margin: 25px auto 5px auto; 
+    font-weight: bold;
+}
+
+#website .home h1.sub-title {
+    margin-top: -50px; 
+    font-size: 35px;
+}
+
+#website .who-we-are h1.sub-title,
+#website .shop h1.sub-title,
+#website .get-in-touch h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+#website .mobile h1.sub-title, 
+#website .tablet h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+.website-tablet img{
+    width: 80%; 
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.website-mobile img{
+    width: 50%; 
+    border-radius: 15px;
+    display: block; 
+    margin-bottom: 10px;
+}
+
+.tablet-text,
+.mobile-text {
+    font-size: 20px;  
+    color: #faf9d9;  
+}
+
+/* ------------------------------------- emeans.html ---------------------------------------------- */
+
+#website .english h1.sub-title {
+    margin-top: -50px; 
+    font-size: 35px;
+}
+
+#website .chinese h1.sub-title, 
+#website .career h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- streamvision.html ---------------------------------------------- */
+
+#website .blog h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- laihin.html ---------------------------------------------- */
+
+#website .malay h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- masteragro.html ---------------------------------------------- */
+
+#website .page-1  h1.sub-title {
+    margin-top: -50px; 
+    font-size: 35px;
+}
+
+#website .page-2 h1.sub-title,
+#website .page-3 h1.sub-title,
+#website .page-4 h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- 10xvalley.html ---------------------------------------------- */
+
+#website .payment h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- ihtrehab.html ---------------------------------------------- */
+
+#website .therapies  h1.sub-title {
+    margin-top: -50px; 
+    font-size: 35px;
+}
+
+#website .neurorehabilitation h1.sub-title,
+#website .medical h1.sub-title,
+#website .musculoskeletal h1.sub-title,
+#website .contact-us h1.sub-title{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* ------------------------------------- sealy.html ---------------------------------------------- */
+
+#website .exquisite h1.sub-title {
+    margin-top: -50px; 
+    font-size: 35px;
+}
+
+#website .palatial h1.sub-title,
+#website .ultra h1.sub-title,
+#website .elevate h1.sub-title,
+#website .postureLux h1.sub-title,
+#website .advantage h1.sub-title,
+#website .posturePremier h1.sub-title{
+    margin-top: 50px; 
+    font-size: 35px;
+}
+
+/* ------------------------------------- bakery.html ---------------------------------------------- */
+
+#website .about-us h1.sub-title,
+#website .FAQ h1.sub-title,
+#website .shop h1.sub-title,
+#website .doughnut h1.sub-title,
+#website .croissant h1.sub-title,
+#website .danish h1.sub-title,
+#website .french h1.sub-title,
+#website .product h1.sub-title,
+#website .search h1.sub-title,
+#website .admin h1.sub-title,
+#website .insert h1.sub-title,
+#website .view h1.sub-title,
+#website .edit h1.sub-title{
+    margin-top: 50px; 
+    font-size: 35px;
+}
+
+/* ------------------------------------- attendance.html ---------------------------------------------- */
+
+#website .add-user h1.sub-title,
+#website .view-user h1.sub-title,
+#website .update-user h1.sub-title,
+#website .delete-user h1.sub-title,
+#website .search-user h1.sub-title,
+#website .view-salary h1.sub-title,
+#website .update-salary h1.sub-title,
+#website .search-salary h1.sub-title,
+#website .view-clockin h1.sub-title,
+#website .search-clockin h1.sub-title,
+#website .view-overtime h1.sub-title,
+#website .approve-reject h1.sub-title,
+#website .search-overtime h1.sub-title,
+#website .view-absence h1.sub-title,
+#website .search-absence h1.sub-title,
+#website .view-late h1.sub-title,
+#website .search-late h1.sub-title,
+#website .view-attendance-report h1.sub-title,
+#website .search-attendance-report h1.sub-title,
+#website .print-attendance-report h1.sub-title,
+#website .view-absence-report h1.sub-title,
+#website .search-absence-report h1.sub-title,
+#website .print-absence-report h1.sub-title,
+#website .user-home h1.sub-title,
+#website .add-user-overtime h1.sub-title,
+#website .view-user-overtime h1.sub-title,
+#website .update-user-overtime h1.sub-title,
+#website .view-user-absence h1.sub-title,
+#website .search-user-absence h1.sub-title,
+#website .view-user-late h1.sub-title,
+#website .search-user-late h1.sub-title{
+    margin-top: 50px; 
+    font-size: 35px;
+}
+
+
+
+
+
+
+/* ------------------------------------- css for mobile screen ---------------------------------------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+
+    .desktop-break {
+        display: none;
+    }
+    
+    .intro-text {
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #header {
+        width: 100%;
+        height: 100vh; 
+        background-image: url(images/home_background_mobile.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        position: relative;
+    }
+    
+    .header-text {
+        margin-top: 0;
+        font-size: 16px;
+        position: relative;
+        z-index: 1; 
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+        position: relative;
+        z-index: 1; 
+    }
+
+    nav .fa-solid{
+        margin-top: 20px;
+        display: block !important;
+        font-size: 20px;
+    }
+
+    nav{           
+        background-color: #524e4a00;
+    }
+
+    nav ul{
+        background: #8c7e67;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 80px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul li a{
+        color: #faf9d9;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 30px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .language-group > li b {
+        font-size: 16px;
+        color: #b13a1c;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .language-group > li {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .education-group > li, .experience-group > li {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .education-group li span, .experience-group li span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #444;
+    }
+    
+    .education-group li ul, .experience-group li ul {
+        list-style: disc;            
+        padding-left: 18px;        
+        margin-top: 5px;
+    }
+    
+    .education-group li ul li, .experience-group li ul li {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .back-icon {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+    }
+
+    #portfolio{
+        padding: 0px;
+    }
+
+    #portfolio .container h1.sub-title {
+        text-align: left;
+    }
+
+    .layer{
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), #343434);
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 12px;
+        transition: height 0.5s;
+    }
+
+    .layer a{
+        margin-top: 10px;
+        color: #faf9d9;
+        font-size: 16px;
+        line-height: 40px;
+        background: #b13a1c;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .work-list {
+    display: grid;
+    grid-template-columns: none;
+    grid-gap: 20px;
+    margin-top: 10px;
+    }
+
+    .btn{
+        display: block;
+        margin: 30px auto;
+        width: fit-content;
+        border: 2px solid #b13a1c;
+        padding: 10px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #faf9d9;
+        transition: background 0.5s;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .contact{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-left p{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    
+    .contact-left p i{
+        color: #faf9d9;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+    
+    .btn.btn2{
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #ffffff00;
+    }
+    
+    .btn.btn2:hover{
+        background-color: #b13a1c;
+    }
+    
+    .contact-right form{
+        width: 100%;
+    }
+    
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        background: #ffffffd8;
+        padding: 15px;
+        margin: 10px 0;
+        color: #b13a1c;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: #524e4a;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
+
+    /* ------------------------------------- work.html ---------------------------------------------- */
+
+    .back-icon {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        z-index: 100;
+    }
+    
+    .back-icon a {
+        color: #faf9d9;      
+        font-size: 24px;     
+        text-decoration: none;
+        background-color: #b13a1c;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+    
+    .back-icon a:hover {
+        color: #b13a1c; 
+        background-color: #faf9d9;
+    }
+
+    #portfolio .container h1.my_work {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .work-list {
+        gap: 30px;
+    }
+
+    /* ------------------------------------- colorpy.html ---------------------------------------------- */
+
+    #portfolio .works h1.sub-title {
+        text-align: left;
+        margin-top: 60px;
+    }
+
+    .link-icon {
+        color: #faf9d9;        
+        font-size: 18px;           
+        text-decoration: none;   
+    }
+
+    #website .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
+    }
+
+    #portfolio .container p{
+        color: #faf9d9;        
+        font-size: 16px; 
+        text-align: justify;
+    }
+
+    .website img{
+        width: 100%; 
+        border-radius: 15px;
+        display: block;
+    }
+
+    .image-number {
+        display: none;
+    }
+
+    #website .home h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .who-we-are h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .get-in-touch h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    #website .mobile h1.sub-title, 
+    #website .tablet h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .website-tablet img{
+        width: 80%; 
+        border-radius: 15px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .website-mobile img{
+        width: 80%; 
+        border-radius: 15px;
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    .tablet-text,
+    .mobile-text {
+        font-size: 16px;  
+        color: #faf9d9;  
+    }
+
+    /* ------------------------------------- emeans.html ---------------------------------------------- */
+    
+    #website .english h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .chinese h1.sub-title, 
+    #website .career h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- streamvision.html ---------------------------------------------- */
+
+    #website .blog h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- laihin.html ---------------------------------------------- */
+
+    #website .malay h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- masteragro.html ---------------------------------------------- */
+
+    #website .page-1  h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .page-2 h1.sub-title,
+    #website .page-3 h1.sub-title,
+    #website .page-4 h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- 10xvalley.html ---------------------------------------------- */
+
+    #website .payment h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- ihtrehab.html ---------------------------------------------- */
+
+    #website .therapies  h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .neurorehabilitation h1.sub-title,
+    #website .medical h1.sub-title,
+    #website .musculoskeletal h1.sub-title,
+    #website .contact-us h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- sealy.html ---------------------------------------------- */
+
+    #website .exquisite h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .palatial h1.sub-title,
+    #website .ultra h1.sub-title,
+    #website .elevate h1.sub-title,
+    #website .postureLux h1.sub-title,
+    #website .advantage h1.sub-title,
+    #website .posturePremier h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- bakery.html ---------------------------------------------- */
+
+    #website .about-us h1.sub-title,
+    #website .FAQ h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .doughnut h1.sub-title,
+    #website .croissant h1.sub-title,
+    #website .danish h1.sub-title,
+    #website .french h1.sub-title,
+    #website .product h1.sub-title,
+    #website .search h1.sub-title,
+    #website .admin h1.sub-title,
+    #website .insert h1.sub-title,
+    #website .view h1.sub-title,
+    #website .edit h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- attendance.html ---------------------------------------------- */
+
+    #website .add-user h1.sub-title,
+    #website .view-user h1.sub-title,
+    #website .update-user h1.sub-title,
+    #website .delete-user h1.sub-title,
+    #website .search-user h1.sub-title,
+    #website .view-salary h1.sub-title,
+    #website .update-salary h1.sub-title,
+    #website .search-salary h1.sub-title,
+    #website .view-clockin h1.sub-title,
+    #website .search-clockin h1.sub-title,
+    #website .view-overtime h1.sub-title,
+    #website .approve-reject h1.sub-title,
+    #website .search-overtime h1.sub-title,
+    #website .view-absence h1.sub-title,
+    #website .search-absence h1.sub-title,
+    #website .view-late h1.sub-title,
+    #website .search-late h1.sub-title,
+    #website .view-attendance-report h1.sub-title,
+    #website .search-attendance-report h1.sub-title,
+    #website .print-attendance-report h1.sub-title,
+    #website .view-absence-report h1.sub-title,
+    #website .search-absence-report h1.sub-title,
+    #website .print-absence-report h1.sub-title,
+    #website .user-home h1.sub-title,
+    #website .add-user-overtime h1.sub-title,
+    #website .view-user-overtime h1.sub-title,
+    #website .update-user-overtime h1.sub-title,
+    #website .view-user-absence h1.sub-title,
+    #website .search-user-absence h1.sub-title,
+    #website .view-user-late h1.sub-title,
+    #website .search-user-late h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/* ------------------------------------- css for tablet screen ---------------------------------------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+
+    .desktop-break {
+        display: none;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+        position: relative;
+        z-index: 1; 
+    }
+    
+    #header {
+        width: 100%;
+        height: 70vh; 
+        background-image: url(images/home_background_tablet.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        position: relative;
+    }
+    
+    .header-text {
+        font-size: 18px;
+        position: relative;
+        z-index: 1; 
+        margin: 0;
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+        margin-top: 0;
+        z-index: 1; 
+    }
+    
+
+    nav .fa-solid{
+        margin-top: 20px;
+        display: block;
+        font-size: 20px;
+    }
+
+    nav{           
+        background-color: #524e4a00;
+    }
+
+    nav ul{
+        background: #8c7e67;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 80px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul li a{
+        color: #faf9d9;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1 {
+        display: none;
+    }
+    
+    .about-col-2 {
+        margin-top: 30px;
+        flex-basis: 100%;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 30px;
+    }
+
+    .language-group > li b {
+        font-size: 16px;
+        color: #b13a1c;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .language-group > li {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .education-group > li, .experience-group > li {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .education-group li span, .experience-group li span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #444;
+    }
+    
+    .education-group li ul, .experience-group li ul {
+        list-style: disc;            
+        padding-left: 18px;        
+        margin-top: 5px;
+    }
+    
+    .education-group li ul li, .experience-group li ul li {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .back-icon {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+    }
+
+    #portfolio{
+        padding: 0px;
+    }
+
+    .work-list {
+        display: grid;
+        grid-template-columns: none;
+        grid-gap: 20px;
+        margin-top: 10px;
+    }
+
+    .btn{
+        display: block;
+        margin: 30px auto;
+        width: fit-content;
+        border: 2px solid #b13a1c;
+        padding: 10px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #faf9d9;
+        transition: background 0.5s;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .contact{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-left p{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    
+    .contact-left p i{
+        color: #faf9d9;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+    
+    .btn.btn2{
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #ffffff00;
+    }
+    
+    .btn.btn2:hover{
+        background-color: #b13a1c;
+    }
+    
+    .contact-right form{
+        width: 100%;
+    }
+    
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        background: #ffffffd8;
+        padding: 15px;
+        margin: 10px 0;
+        color: #b13a1c;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: #524e4a;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
+    
+    /* ------------------------------------- work.html ---------------------------------------------- */
+
+    .back-icon {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        z-index: 100;
+    }
+    
+    .back-icon a {
+        color: #faf9d9;      
+        font-size: 24px;     
+        text-decoration: none;
+        background-color: #b13a1c;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+    
+    .back-icon a:hover {
+        color: #b13a1c; 
+        background-color: #faf9d9;
+    }
+
+    #portfolio .container h1.my_work {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .work-list {
+        gap: 30px;
+    }
+
+    /* ------------------------------------- colorpy.html ---------------------------------------------- */
+
+    #portfolio .works h1.sub-title {
+        text-align: left !important;
+        margin-top: 100px !important;
+    }
+
+    .link-icon {
+        color: #faf9d9;        
+        font-size: 18px;           
+        text-decoration: none;   
+    }
+
+    #website .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 30px;
+    }
+
+    #portfolio .container p{
+        color: #faf9d9;        
+        font-size: 16px; 
+        text-align: justify;
+    }
+
+    .website img{
+        width: 100%; 
+        border-radius: 15px;
+        display: block;
+    }
+
+    .image-number {
+        display: none;
+    }
+
+    #website .home h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .who-we-are h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .get-in-touch h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    #website .mobile h1.sub-title, 
+    #website .tablet h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .website-tablet img{
+        width: 80%; 
+        border-radius: 15px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .website-mobile img{
+        width: 80%; 
+        border-radius: 15px;
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    .tablet-text,
+    .mobile-text {
+        font-size: 16px;  
+        color: #faf9d9;  
+    }
+
+    /* ------------------------------------- emeans.html ---------------------------------------------- */
+
+    #website .english h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .chinese h1.sub-title, 
+    #website .career h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- streamvision.html ---------------------------------------------- */
+
+    #website .blog h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- laihin.html ---------------------------------------------- */
+
+    #website .malay h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- masteragro.html ---------------------------------------------- */
+
+    #website .page-1  h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .page-2 h1.sub-title,
+    #website .page-3 h1.sub-title,
+    #website .page-4 h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- 10xvalley.html ---------------------------------------------- */
+
+    #website .payment h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- ihtrehab.html ---------------------------------------------- */
+
+    #website .therapies  h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .neurorehabilitation h1.sub-title,
+    #website .medical h1.sub-title,
+    #website .musculoskeletal h1.sub-title,
+    #website .contact-us h1.sub-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- sealy.html ---------------------------------------------- */
+
+    #website .exquisite h1.sub-title {
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    #website .palatial h1.sub-title,
+    #website .ultra h1.sub-title,
+    #website .elevate h1.sub-title,
+    #website .postureLux h1.sub-title,
+    #website .advantage h1.sub-title,
+    #website .posturePremier h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- bakery.html ---------------------------------------------- */
+
+    #website .about-us h1.sub-title,
+    #website .FAQ h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .doughnut h1.sub-title,
+    #website .croissant h1.sub-title,
+    #website .danish h1.sub-title,
+    #website .french h1.sub-title,
+    #website .product h1.sub-title,
+    #website .search h1.sub-title,
+    #website .admin h1.sub-title,
+    #website .insert h1.sub-title,
+    #website .view h1.sub-title,
+    #website .edit h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+
+    /* ------------------------------------- attendance.html ---------------------------------------------- */
+
+    #website .add-user h1.sub-title,
+    #website .view-user h1.sub-title,
+    #website .update-user h1.sub-title,
+    #website .delete-user h1.sub-title,
+    #website .search-user h1.sub-title,
+    #website .view-salary h1.sub-title,
+    #website .update-salary h1.sub-title,
+    #website .search-salary h1.sub-title,
+    #website .view-clockin h1.sub-title,
+    #website .search-clockin h1.sub-title,
+    #website .view-overtime h1.sub-title,
+    #website .approve-reject h1.sub-title,
+    #website .search-overtime h1.sub-title,
+    #website .view-absence h1.sub-title,
+    #website .search-absence h1.sub-title,
+    #website .view-late h1.sub-title,
+    #website .search-late h1.sub-title,
+    #website .view-attendance-report h1.sub-title,
+    #website .search-attendance-report h1.sub-title,
+    #website .print-attendance-report h1.sub-title,
+    #website .view-absence-report h1.sub-title,
+    #website .search-absence-report h1.sub-title,
+    #website .print-absence-report h1.sub-title,
+    #website .user-home h1.sub-title,
+    #website .add-user-overtime h1.sub-title,
+    #website .view-user-overtime h1.sub-title,
+    #website .update-user-overtime h1.sub-title,
+    #website .view-user-absence h1.sub-title,
+    #website .search-user-absence h1.sub-title,
+    #website .view-user-late h1.sub-title,
+    #website .search-user-late h1.sub-title{
+        margin-top: 30px; 
+        font-size: 25px;
+    }
+}
+
+
+
+
+/* ------------------------------------- css for laptop screen ---------------------------------------------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px){
+    .intro-text{
+        font-size: 18px;
+    }
+
+    #header {
+        width: 100%;
+        height: 120vh;
+        background-image: url(images/home_background_laptop.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #header:hover::before {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    .container{
+        padding: 10px 10%;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: fixed;       
+        top: 0;                 
+        left: 0;                
+        width: 100%;           
+        background-color: #524e4a; 
+        padding: 10px 30px;      
+        box-sizing: border-box; 
+        z-index: 10;   
+    }
+
+    .logo{
+        width: 140px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+
+    nav ul li a{
+        color: #faf9d9;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative;
+    }
+
+    nav ul li a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #8c7e67;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.6s;
+    }
+
+    nav ul li a:hover::after{
+        width: 100%;
+    }
+
+    .header-text{
+        margin-top: 25%;
+        font-size: 20px;
+    }
+
+    .header-text h1{
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .header-text h1 span{
+        color: #8c7e67;
+    }
+
+    /* ------------------------------------- about ---------------------------------------------- */
+
+    #about{
+        padding: 150px 0;
+        color: #faf9d9;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-col-1{
+        flex-basis: 40%;
+    }
+
+    .about-col-1 img {
+        width: 100%;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .about-col-1 img:hover {
+        transform: scale(1.05); 
+    }
+
+    .about-col-2{
+        flex-basis: 55%;
+    }
+
+    .sub-title{
+        font-size: 50px;
+        font-weight: 600;
+        color: #8c7e67;
+    }
+
+    .tab-titles{
+        display: flex;
+        margin: 0;
+    }
+
+    .tab-links{
+        margin: 30px 60px 30px 0;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tab-links::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #8c7e67;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+    }
+
+    .tab-links.active-link::after{
+        width: 50%;
+    }
+
+    .tab-contents ul li{
+        margin: 10px 0 10px 10px;
+    }
+
+    .tab-contents ul li span{
+        color: #b13a1c;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .language-group{
+        background-color: #f9f9f9; 
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        transition: box-shadow 0.3s ease; 
+    }
+
+    .language-group:hover {
+        box-shadow: 0 2px 15px rgb(255, 244, 200);
+    }
+
+    .language-group > li b {
+        font-size: 18px;
+        color: #b13a1c;
+        margin-bottom: 10px;
+    }
+
+    .language-group > li {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .skill-group{
+        background-color: #f9f9f9; 
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        transition: box-shadow 0.3s ease; 
+    }
+
+    .skill-group:hover {
+        box-shadow: 0 2px 15px rgb(255, 244, 200);
+    }
+
+    .skill-group > li {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .education-group, .experience-group {
+        background-color: #f9f9f9; 
+        padding: 15px;
+        border-radius: 15px;
+        margin-bottom: 20px;              
+        list-style: none;  
+        transition: box-shadow 0.3s ease; 
+    }
+
+    .education-group:hover, .experience-group:hover {
+        box-shadow: 0 2px 15px rgb(255, 244, 200);
+    }
+
+    .education-group > li, .experience-group > li {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .education-group li span, .experience-group li span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #444;
+    }
+
+    .education-group li ul, .experience-group li ul {
+        list-style: disc;            
+        padding-left: 20px;        
+        margin-top: 5px;
+    }
+
+    .education-group li ul li, .experience-group li ul li {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .tab-contents{
+        display: none;
+    }
+
+    .tab-contents.active-tab{
+        display: block;
+    }
+
+    /* ------------------------------------- portfolio ---------------------------------------------- */
+
+    #portfolio{
+        margin-top: -150px;
+    }
+
+    .work-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
+    .work{
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .work:hover{
+        box-shadow: 0 2px 15px rgb(255, 244, 200);
+    }
+
+    .work img{
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+        transition: transform 0.5s;
+    }
+
+    .layer{
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), #343434);
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.5s;
+    }
+
+    .layer a{
+        margin-top: 10px;
+        color: #faf9d9;
+        font-size: 18px;
+        line-height: 60px;
+        background: #b13a1c;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .layer a:hover{
+        color: #b13a1c;
+        background: #faf9d9;
+    }
+
+    .work:hover img{
+        transform: scale(1.1);
+    }
+
+    .work:hover .layer{
+        height: 100%; 
+    }
+
+    .btn{
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 2px solid #b13a1c;
+        padding: 14px 50px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #faf9d9;
+        transition: background 0.5s;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .btn:hover{
+        background: #b13a1c;
+        box-shadow: 0 2px 15px rgb(0, 0, 0);
+    }
+
+    /* ------------------------------------- contact ---------------------------------------------- */
+
+    .contact{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .contact-left{
+        flex-basis: 40%;
+    }
+
+    .contact-right{
+        flex-basis: 60%;
+    }
+
+    .contact-left p{
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #faf9d9;
+    }
+
+    .contact-left p i{
+        color: #faf9d9;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .btn.btn2{
+        display: inline-block;
+        margin-top: 30px;
+        background-color: #ffffff00;
+    }
+
+    .btn.btn2:hover{
+        background-color: #b13a1c;
+    }
+
+    .contact-right form{
+        width: 100%;
+    }
+
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        background: #ffffffd8;
+        padding: 15px;
+        margin: 15px 0;
+        color: #b13a1c;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    /* ------------------------------------- footer ---------------------------------------------- */
+
+    footer {
+        margin-top: 100px;
+        background-color: #524e4a;
+    }
+
+    footer p {
+        font-size: 14px;
+        color: white;
+        text-align: center;
+    }
+
+    /* ------------------------------------- work.html ---------------------------------------------- */
+
+    .back-icon {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        z-index: 100;
+    }
+
+    .back-icon a {
+        color: #faf9d9;      
+        font-size: 24px;     
+        text-decoration: none;
+        background-color: #b13a1c;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+    .back-icon a:hover {
+        color: #b13a1c; 
+        background-color: #faf9d9;
+    }
+
+    #portfolio .container h1.my_work {
+        margin-top: 80px;
+        text-align: left;
+    }
+
+    .work-list {
+        gap: 30px;
+    }
+
+    /* ------------------------------------- colorpy.html ---------------------------------------------- */
+
+    #portfolio .works h1.sub-title {
+        text-align: left;
+        margin-top: 80px;
+    }
+
+    .link-icon {
+        color: #faf9d9;        
+        font-size: 18px;           
+        text-decoration: none;   
+    }
+
+    .link-icon:hover {
+        color: #b13a1c;   
+    }
+
+    .link-icon i {
+        margin-right: 8px;  
+    }
+
+    #website .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px;
+    }
+
+    #portfolio .container p{
+        color: #faf9d9;        
+        font-size: 18px; 
+        margin-top: 10px;
+    }
+
+    .website img{
+        width: 100%; 
+        border-radius: 15px;
+        display: block;
+    }
+
+    .image-number {
+        font-size: 18px;
+        color: #ffffff;          
+        background-color: #b13a1c; 
+        width: 35px;             
+        height: 35px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;        
+        margin: 25px auto 5px auto; 
+        font-weight: bold;
+    }
+
+    #website .home h1.sub-title {
+        margin-top: -50px; 
+        font-size: 30px;
+    }
+
+    #website .who-we-are h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .get-in-touch h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    #website .mobile h1.sub-title, 
+    #website .tablet h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .website-tablet img{
+        width: 80%; 
+        border-radius: 15px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .website-mobile img{
+        width: 50%; 
+        border-radius: 15px;
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    .tablet-text,
+    .mobile-text {
+        font-size: 18px;  
+        color: #faf9d9;  
+    }
+
+    /* ------------------------------------- emeans.html ---------------------------------------------- */
+
+    #website .english h1.sub-title {
+        margin-top: -50px; 
+        font-size: 30px;
+    }
+
+    #website .chinese h1.sub-title, 
+    #website .career h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- streamvision.html ---------------------------------------------- */
+
+    #website .blog h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- laihin.html ---------------------------------------------- */
+
+    #website .malay h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- masteragro.html ---------------------------------------------- */
+
+    #website .page-1  h1.sub-title {
+        margin-top: -50px; 
+        font-size: 30px;
+    }
+
+    #website .page-2 h1.sub-title,
+    #website .page-3 h1.sub-title,
+    #website .page-4 h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- 10xvalley.html ---------------------------------------------- */
+
+    #website .payment h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- ihtrehab.html ---------------------------------------------- */
+
+    #website .therapies  h1.sub-title {
+        margin-top: -50px; 
+        font-size: 30px;
+    }
+
+    #website .neurorehabilitation h1.sub-title,
+    #website .medical h1.sub-title,
+    #website .musculoskeletal h1.sub-title,
+    #website .contact-us h1.sub-title{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- sealy.html ---------------------------------------------- */
+
+    #website .exquisite h1.sub-title {
+        margin-top: -50px; 
+        font-size: 30px;
+    }
+
+    #website .palatial h1.sub-title,
+    #website .ultra h1.sub-title,
+    #website .elevate h1.sub-title,
+    #website .postureLux h1.sub-title,
+    #website .advantage h1.sub-title,
+    #website .posturePremier h1.sub-title{
+        margin-top: 50px; 
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- bakery.html ---------------------------------------------- */
+
+    #website .about-us h1.sub-title,
+    #website .FAQ h1.sub-title,
+    #website .shop h1.sub-title,
+    #website .doughnut h1.sub-title,
+    #website .croissant h1.sub-title,
+    #website .danish h1.sub-title,
+    #website .french h1.sub-title,
+    #website .product h1.sub-title,
+    #website .search h1.sub-title,
+    #website .admin h1.sub-title,
+    #website .insert h1.sub-title,
+    #website .view h1.sub-title,
+    #website .edit h1.sub-title{
+        margin-top: 50px; 
+        font-size: 30px;
+    }
+
+    /* ------------------------------------- attendance.html ---------------------------------------------- */
+
+    #website .add-user h1.sub-title,
+    #website .view-user h1.sub-title,
+    #website .update-user h1.sub-title,
+    #website .delete-user h1.sub-title,
+    #website .search-user h1.sub-title,
+    #website .view-salary h1.sub-title,
+    #website .update-salary h1.sub-title,
+    #website .search-salary h1.sub-title,
+    #website .view-clockin h1.sub-title,
+    #website .search-clockin h1.sub-title,
+    #website .view-overtime h1.sub-title,
+    #website .approve-reject h1.sub-title,
+    #website .search-overtime h1.sub-title,
+    #website .view-absence h1.sub-title,
+    #website .search-absence h1.sub-title,
+    #website .view-late h1.sub-title,
+    #website .search-late h1.sub-title,
+    #website .view-attendance-report h1.sub-title,
+    #website .search-attendance-report h1.sub-title,
+    #website .print-attendance-report h1.sub-title,
+    #website .view-absence-report h1.sub-title,
+    #website .search-absence-report h1.sub-title,
+    #website .print-absence-report h1.sub-title,
+    #website .user-home h1.sub-title,
+    #website .add-user-overtime h1.sub-title,
+    #website .view-user-overtime h1.sub-title,
+    #website .update-user-overtime h1.sub-title,
+    #website .view-user-absence h1.sub-title,
+    #website .search-user-absence h1.sub-title,
+    #website .view-user-late h1.sub-title,
+    #website .search-user-late h1.sub-title{
+        margin-top: 50px; 
+        font-size: 30px;
+    }
+}

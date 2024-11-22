@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lim Min Yee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img scr="images/photo.PNG" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p class="intro-text">Degree Fresh Graduate from Tunku Abdul Rahman University of Management and Technology (TARUMT)</p>
+                <h1>Hello, I am <span>Min Yee</span> from Malaysia.</h1>
+                <p>Explore my portfolio to learn more about my skills, experience, and education, which demonstrate <br class="desktop-break"> my commitment to continuous growth and problem-solving in the dynamic world of IT.</p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- ------------------------------------- about ---------------------------------------------- -->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an energetic and motivated IT graduate with a Bachelor of Information Systems (Honours) in Enterprise Information Systems from TARUMT, actively seeking an IT-related position. I have a strong passion for the industry and a solid understanding of enterprise systems and technology solutions. I am eager to leverage my skills to support projects and help the company succeed in the tech field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('language')">Language</p>
+                        <p class="tab-links" onclick="opentab('skill')">Skill</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="language">
+                        <ul class="language-group">
+                            <li><b>Mandarin - </b>Native or Bilingual Proficiency </li>
+                            <li><b>English - </b>Professional Working Proficiency</li>
+                            <li><b>Malay - </b>Professional Working Proficiency</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="skill">
+                        <ul class="skill-group">
+                            <li>HTML</li>
+                            <li>Cascading Style Sheets (CSS)</li>
+                            <li>C (Programming Language)</li>
+                            <li>Visual Basic .NET (VB.NET)</li>
+                            <li>PHP</li>
+                            <li>JAVA</li>
+                            <li>WordPress</li>
+                            <li>Tableau</li>
+                            <li>SQL</li>
+                            <li>SAP Business One</li>
+                            <li>uiPath</li>
+                            <li>Packet Tracer</li>
+                            <li>Microsoft Office</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul class="experience-group">
+                            <li>
+                                <span>IT Intern - Original Intelligence Sdn Bhd</span> <br>
+                                October 2021 - January 2022
+                                <ul>
+                                    <li>Able to enhance the web application (i-Ruma) with dual language support.</li>
+                                    <li>Added features to the web application using the database.</li>
+                                    <li>Improved the graphical user interface (GUI) using CSS for a more attractive look.</li>
+                                    <li>Used Crystal Report to display reports in a neater format.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                        <ul class="experience-group">
+                            <li>
+                                <span>Web Development Intern - Stelix Media Solutions Sdn Bhd</span> <br>
+                                February 2024 - August 2024
+                                <ul>
+                                    <li>Developed responsive websites for desktops, tablets, and mobile devices.</li>
+                                    <li>Implemented dual language support for the website.</li>
+                                    <li>Maintained and modified the website as per requests.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul class="education-group">
+                            <li>
+                                <span>Diploma in Information System</span> <br>
+                                May 2020 - May 2022
+                                <ul>
+                                    <li>CGPA: 3.6130</li>
+                                    <li>Graduate with Merit</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="education-group">
+                            <li>
+                                <span>Bachelor's of Information Systems (Honours) in Enterprise Information Systems</span> <br>
+                                May 2022 - August 2024
+                                <ul>
+                                    <li>CGPA: 3.3450</li>
+                                    <li>Dean's List Award: Year 3 Semester 2 (GPA: 3.8333)</li>
+                                    <li>Graduate with Merit</li>
+                                </ul>
+                            </li>
+                        </ul>                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- ------------------------------------- Portfolio ---------------------------------------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h2>Colorpy</h2>
+                    <a href="colorpy.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h2>Emeans</h2>
+                    <a href="emeans.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h2>StreamVision - Asia</h2>
+                    <a href="streamvision.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-4.png">
+                <div class="layer">
+                    <h2>LaiHin Salted Egg</h2>
+                    <a href="laihin.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/work-5.png">
+                <div class="layer">
+                    <h2>Master Agro</h2>
+                    <a href="masteragro.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="images/work-6.png">
+                <div class="layer">
+                    <h2>10X Valley</h2>
+                    <a href="10xvalley.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="work.html" class="btn"> See More</a>
+    </div>
+</div>
+
+
+<!-- ------------------------------------- Contact ---------------------------------------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>minyeel76@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>017-8718212</p>
+
+                <a href="images/LimMinYee_Resume.pdf" target="_blank" download class="btn btn2">Download Resume</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required></input>
+                    <input type="email" name="Email" placeholder="Your Email" required></input>
+                    <textarea name="Message" rows=6 placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ------------------------------------- Footer ---------------------------------------------- -->
+
+<footer>
+    <div class="container">
+            <p>Copyright &copy; 2024 Lim Min Yee. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwV-cA0NUf73R5RJP2WEQh-2bwxIC0y9ns5eW9R0lCcCeDkER9SmzNsSDX-yfCSSkrm1Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeOut(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
